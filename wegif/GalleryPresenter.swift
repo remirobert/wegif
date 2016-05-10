@@ -9,7 +9,7 @@
 import UIKit
 
 class GalleryPresenter: GalleryModuleInterface, GalleryInteractorOutput {
-
+    
     var interactor: GalleryInteractorInput?
     var wireframe: GalleryWireframe?
     var userInterface: GalleryViewInterface?
@@ -18,7 +18,16 @@ class GalleryPresenter: GalleryModuleInterface, GalleryInteractorOutput {
         self.interactor?.fetchGalleryContent()
     }
     
-    func getGalleryContent() {
-        self.userInterface?.showGallery()
+    func getGalleryContent(gifs: [Gif]?, error: NSError?) {
+        print("gifs : \(gifs)")
+        if let _ = error {
+            self.userInterface?.showErrorMessage("error network")
+        }
+        else {
+            guard let gifs = gifs else {
+                return
+            }
+            self.userInterface?.showGallery(gifs)
+        }
     }
 }

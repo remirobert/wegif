@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GalleryCollectionViewCell" customModule="wegif" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j94-Su-yLh" customClass="FLAnimatedImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-fY-rtl">
+                        <rect key="frame" x="85" y="84" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="5af-4g-9gR"/>
+                            <constraint firstAttribute="height" constant="20" id="9zR-WY-nu9"/>
+                        </constraints>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="j94-Su-yLh" secondAttribute="bottom" id="2yT-Bd-Vgp"/>
+                <constraint firstItem="d5f-fY-rtl" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="EUS-U5-ySy"/>
+                <constraint firstAttribute="trailing" secondItem="j94-Su-yLh" secondAttribute="trailing" id="F2k-Vg-d7i"/>
+                <constraint firstItem="j94-Su-yLh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="J22-5Q-QgY"/>
+                <constraint firstItem="j94-Su-yLh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LOr-Eg-qCj"/>
+                <constraint firstItem="d5f-fY-rtl" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ogl-lf-hfD"/>
+            </constraints>
+            <size key="customSize" width="190" height="188"/>
+            <connections>
+                <outlet property="imageView" destination="j94-Su-yLh" id="U0d-BD-I53"/>
+                <outlet property="indicatorLoading" destination="d5f-fY-rtl" id="tNs-D9-YqZ"/>
+            </connections>
+            <point key="canvasLocation" x="315" y="206"/>
+        </collectionViewCell>
+    </objects>
+</document>

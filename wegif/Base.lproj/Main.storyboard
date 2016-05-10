@@ -29,11 +29,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="vWj-g7-2JR" id="s7X-AG-xQn"/>
+                        <outlet property="collectionViewLayout" destination="TLD-pW-nmI" id="Mv6-EB-O2x"/>
+                        <outlet property="emptyView" destination="tgS-3I-eR0" id="uga-oC-LfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="tgS-3I-eR0">
+                    <rect key="frame" x="0.0" y="0.0" width="586" height="473"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-z1-IBI">
+                            <rect key="frame" x="275" y="218" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="MR3-7U-KOu"/>
+                                <constraint firstAttribute="width" constant="37" id="P8Y-o9-Slf"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp1-0f-COa">
+                            <rect key="frame" x="181" y="263" width="225" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="225" id="ddl-EU-zUQ"/>
+                                <constraint firstAttribute="height" constant="21" id="qay-Dg-OF9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.95076121790000001" green="0.95076121790000001" blue="0.95076121790000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Rp1-0f-COa" firstAttribute="top" secondItem="BxX-z1-IBI" secondAttribute="bottom" constant="8" id="BsE-WG-zbH"/>
+                        <constraint firstItem="Rp1-0f-COa" firstAttribute="centerX" secondItem="tgS-3I-eR0" secondAttribute="centerX" id="P0B-l4-Lne"/>
+                        <constraint firstItem="BxX-z1-IBI" firstAttribute="centerY" secondItem="tgS-3I-eR0" secondAttribute="centerY" id="PKG-z0-m6Y"/>
+                        <constraint firstItem="BxX-z1-IBI" firstAttribute="centerX" secondItem="tgS-3I-eR0" secondAttribute="centerX" id="QtM-Hs-6ao"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vWj-g7-2JR">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="449"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLD-pW-nmI">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
             </objects>
+            <point key="canvasLocation" x="453" y="389"/>
         </scene>
     </scenes>
 </document>

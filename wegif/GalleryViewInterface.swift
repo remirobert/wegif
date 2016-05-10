@@ -9,6 +9,6 @@
 import UIKit
 
 protocol GalleryViewInterface {
-    func showErrorLoadinGallery(error: String?)
-    func showGallery()
+    func showErrorMessage(error: String)
+    func showGallery(gifs: [Gif])
 }

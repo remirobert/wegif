@@ -5,5 +5,5 @@ use_frameworks!
 
 pod 'Alamofire'
 pod 'AlamofireNetworkActivityIndicator'
-
-pod 'PromiseKit'
+pod 'PINRemoteImage'
+pod 'FLAnimatedImage'

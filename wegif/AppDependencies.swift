@@ -16,9 +16,13 @@ class AppDependencies {
     private func initGalleryDependencies() {
         let galleryPresenter = GalleryPresenter()
         let galleryInteractor = GalleryInteractor()
+        let dataManager = GalleryDataManager()
         
         galleryPresenter.interactor = galleryInteractor
         galleryPresenter.wireframe = self.galleryWireframe
+        
+        galleryInteractor.dataManager = dataManager
+        galleryInteractor.interactorOutput = galleryPresenter
         
         self.galleryWireframe.galleryPresenter = galleryPresenter
     }

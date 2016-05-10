@@ -9,5 +9,5 @@
 import UIKit
 
 protocol GalleryInteractorOutput {
-    func getGalleryContent()
+    func getGalleryContent(gifs: [Gif]?, error: NSError?)
 }
