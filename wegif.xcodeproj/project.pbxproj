@@ -167,6 +167,7 @@
 		BBF44CF81CE07EF0005B5CC5 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
+				BBF44D0A1CE084EF005B5CC5 /* GalleryModuleInterface.swift */,
 			);
 			name = "Module Interface";
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 		BBF44CF91CE07F03005B5CC5 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				BBF44D0A1CE084EF005B5CC5 /* GalleryModuleInterface.swift */,
 				BBF44CFD1CE07FEF005B5CC5 /* Presenter */,
 				BBF44CFE1CE07FF5005B5CC5 /* View */,
 				BBF44CFF1CE08001005B5CC5 /* Wireframe */,

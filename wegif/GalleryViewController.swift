@@ -10,11 +10,13 @@ import UIKit
 
 class GalleryViewController: UIViewController, GalleryViewInterface {
 
-    var presenter: GalleryPresenter?
+    var eventHandler: GalleryModuleInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.orangeColor()
+        
+        self.eventHandler?.loadGallery()
     }
     
     func showErrorLoadinGallery(error: String?) {
@@ -22,6 +24,6 @@ class GalleryViewController: UIViewController, GalleryViewInterface {
     }
     
     func showGallery() {
-        
+        print("gallery shown")
     }
 }

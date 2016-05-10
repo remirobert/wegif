@@ -14,9 +14,11 @@ class GalleryWireframe {
     private var galleryViewController: GalleryViewController?
     
     func presentGalleryInterface(window: UIWindow) {
-        let controller = GalleryViewController.instanceController(.Main)
+        self.galleryViewController = GalleryViewController.instanceController(.Main) as? GalleryViewController
 
+        self.galleryViewController!.eventHandler = self.galleryPresenter
+        self.galleryPresenter?.userInterface = self.galleryViewController
         let navigationController = window.rootViewController as! UINavigationController
-        navigationController.viewControllers = [controller]
+        navigationController.viewControllers = [self.galleryViewController!]
     }
 }

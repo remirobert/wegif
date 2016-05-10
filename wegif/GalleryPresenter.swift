@@ -15,6 +15,6 @@ class GalleryPresenter: GalleryModuleInterface {
     var userInterface: GalleryViewInterface?
     
     func loadGallery() {
-        
+        self.userInterface?.showGallery()
     }
 }
