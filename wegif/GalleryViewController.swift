@@ -16,7 +16,7 @@ class GalleryViewController: UIViewController, GalleryViewInterface {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.orangeColor()
         
-        self.eventHandler?.loadGallery()
+        self.eventHandler?.updateGalleryView()
     }
     
     func showErrorLoadinGallery(error: String?) {

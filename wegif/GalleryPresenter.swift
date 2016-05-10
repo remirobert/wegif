@@ -8,13 +8,17 @@
 
 import UIKit
 
-class GalleryPresenter: GalleryModuleInterface {
+class GalleryPresenter: GalleryModuleInterface, GalleryInteractorOutput {
 
-    var interactor: GalleryInteractor?
+    var interactor: GalleryInteractorInput?
     var wireframe: GalleryWireframe?
     var userInterface: GalleryViewInterface?
     
-    func loadGallery() {
+    func updateGalleryView() {
+        self.interactor?.fetchGalleryContent()
+    }
+    
+    func getGalleryContent() {
         self.userInterface?.showGallery()
     }
 }

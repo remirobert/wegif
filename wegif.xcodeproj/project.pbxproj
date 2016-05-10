@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AEDA67A554A2296637CBFE3E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23CF07BE7C2657E6AFDF80E /* Pods.framework */; };
+		BB23726E1CE1D33500ED4065 /* GalleryInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23726D1CE1D33500ED4065 /* GalleryInteractorInput.swift */; };
+		BB2372701CE1D34200ED4065 /* GalleryInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23726F1CE1D34200ED4065 /* GalleryInteractorOutput.swift */; };
+		BB2372721CE1D86D00ED4065 /* GalleryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2372711CE1D86D00ED4065 /* GalleryDataManager.swift */; };
+		BB2372771CE1DDB100ED4065 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2372761CE1DDB100ED4065 /* Gif.swift */; };
+		BB2372791CE1DF5B00ED4065 /* GalleryManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2372781CE1DF5B00ED4065 /* GalleryManagerProtocol.swift */; };
+		BB23727B1CE1DFD800ED4065 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23727A1CE1DFD800ED4065 /* Network.swift */; };
 		BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */; };
 		BBF44CD91CE063BA005B5CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CD71CE063BA005B5CC5 /* Main.storyboard */; };
 		BBF44CDB1CE063BA005B5CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CDA1CE063BA005B5CC5 /* Assets.xcassets */; };
@@ -36,6 +42,12 @@
 /* Begin PBXFileReference section */
 		3CF1277EC9C507F0BE1ABA53 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		685719388FA1F0616160E4B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BB23726D1CE1D33500ED4065 /* GalleryInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInteractorInput.swift; sourceTree = "<group>"; };
+		BB23726F1CE1D34200ED4065 /* GalleryInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInteractorOutput.swift; sourceTree = "<group>"; };
+		BB2372711CE1D86D00ED4065 /* GalleryDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDataManager.swift; sourceTree = "<group>"; };
+		BB2372761CE1DDB100ED4065 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		BB2372781CE1DF5B00ED4065 /* GalleryManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryManagerProtocol.swift; sourceTree = "<group>"; };
+		BB23727A1CE1DFD800ED4065 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BBF44CD01CE063BA005B5CC5 /* wegif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wegif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF44CD81CE063BA005B5CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +102,14 @@
 				C23CF07BE7C2657E6AFDF80E /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB23727C1CE1DFDB00ED4065 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BB23727A1CE1DFD800ED4065 /* Network.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		BBF44CC71CE063B9005B5CC5 = {
@@ -159,7 +179,7 @@
 			children = (
 				BBF44CFA1CE07F68005B5CC5 /* Interactor */,
 				BBF44CFB1CE07F76005B5CC5 /* Manager */,
-				BBF44CFC1CE07F7F005B5CC5 /* Model */,
+				BBF44CFC1CE07F7F005B5CC5 /* Entity */,
 			);
 			name = "Application Logic";
 			sourceTree = "<group>";
@@ -186,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				BBF44D061CE083E3005B5CC5 /* GalleryInteractor.swift */,
+				BB23726D1CE1D33500ED4065 /* GalleryInteractorInput.swift */,
+				BB23726F1CE1D34200ED4065 /* GalleryInteractorOutput.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -193,15 +215,18 @@
 		BBF44CFB1CE07F76005B5CC5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BB2372711CE1D86D00ED4065 /* GalleryDataManager.swift */,
+				BB2372781CE1DF5B00ED4065 /* GalleryManagerProtocol.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
 		};
-		BBF44CFC1CE07F7F005B5CC5 /* Model */ = {
+		BBF44CFC1CE07F7F005B5CC5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				BB2372761CE1DDB100ED4065 /* Gif.swift */,
 			);
-			name = Model;
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		BBF44CFD1CE07FEF005B5CC5 /* Presenter */ = {
@@ -232,6 +257,7 @@
 		BBF44D0E1CE0F4AD005B5CC5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB23727C1CE1DFDB00ED4065 /* Network */,
 				BBF44D111CE0F51F005B5CC5 /* Extensions */,
 			);
 			name = Common;
@@ -397,14 +423,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2372721CE1D86D00ED4065 /* GalleryDataManager.swift in Sources */,
 				BBF44D011CE08027005B5CC5 /* GalleryViewController.swift in Sources */,
 				BBF44D031CE08350005B5CC5 /* GalleryPresenter.swift in Sources */,
 				BBF44CF41CE065C2005B5CC5 /* AppDependencies.swift in Sources */,
 				BBF44D0D1CE0F1FD005B5CC5 /* GalleryWireframe.swift in Sources */,
+				BB23727B1CE1DFD800ED4065 /* Network.swift in Sources */,
+				BB2372701CE1D34200ED4065 /* GalleryInteractorOutput.swift in Sources */,
+				BB2372791CE1DF5B00ED4065 /* GalleryManagerProtocol.swift in Sources */,
 				BBF44D101CE0F519005B5CC5 /* UIViewController+Extensions.swift in Sources */,
 				BBF44D091CE0842E005B5CC5 /* GalleryViewInterface.swift in Sources */,
+				BB23726E1CE1D33500ED4065 /* GalleryInteractorInput.swift in Sources */,
 				BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */,
 				BBF44D0B1CE084EF005B5CC5 /* GalleryModuleInterface.swift in Sources */,
+				BB2372771CE1DDB100ED4065 /* Gif.swift in Sources */,
 				BBF44D071CE083E3005B5CC5 /* GalleryInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

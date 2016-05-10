@@ -9,5 +9,5 @@
 import UIKit
 
 protocol GalleryModuleInterface {
-    func loadGallery()
+    func updateGalleryView()
 }

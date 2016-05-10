@@ -8,6 +8,11 @@
 
 import UIKit
 
-class GalleryInteractor: NSObject {
+class GalleryInteractor: GalleryInteractorInput {
 
+    var interactorOutput: GalleryInteractorOutput?
+    
+    func fetchGalleryContent() {
+        
+    }
 }
