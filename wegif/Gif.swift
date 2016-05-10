@@ -16,7 +16,7 @@ class Gif {
     init?(json: JSON?) {
         guard let json = json else { return nil }
         guard let images = json["images"] as? JSON,
-            downsized = images["downsized"] as? JSON,
+            downsized = images["fixed_width_small"] as? JSON,
             let orignal = images["original"] as? JSON else {
             return nil
         }

@@ -21,7 +21,7 @@ class GalleryPresenter: GalleryModuleInterface, GalleryInteractorOutput {
     func getGalleryContent(gifs: [Gif]?, error: NSError?) {
         print("gifs : \(gifs)")
         if let _ = error {
-            self.userInterface?.showErrorMessage("error network")
+            self.userInterface?.showErrorMessage("Error Loading Gallery.")
         }
         else {
             guard let gifs = gifs else {

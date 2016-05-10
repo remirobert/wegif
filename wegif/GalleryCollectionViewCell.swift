@@ -31,6 +31,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, GalleryCellProtocol {
     
     override func prepareForReuse() {
         self.imageView.animatedImage = nil
+        self.imageView.alpha = 0
         self.indicatorLoading.startAnimating()
     }
     
@@ -40,6 +41,11 @@ class GalleryCollectionViewCell: UICollectionViewCell, GalleryCellProtocol {
             url = NSURL(string: imageUrl) else {
             return
         }
-        self.imageView.pin_setImageFromURL(url)
+        self.imageView.pin_setImageFromURL(url) { (result: PINRemoteImageManagerResult) in
+            self.indicatorLoading.stopAnimating()
+            UIView.animateWithDuration(0.8, animations: {
+                self.imageView.alpha = 1
+            })
+        }
     }
 }

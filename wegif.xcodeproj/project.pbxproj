@@ -140,6 +140,85 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		BB86CD811CE238C100EFDEAE /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				BB86CD841CE238EC00EFDEAE /* Application Logic */,
+				BB86CD831CE238E300EFDEAE /* Module Interface */,
+				BB86CD821CE238D700EFDEAE /* User Interface */,
+			);
+			name = Sharing;
+			sourceTree = "<group>";
+		};
+		BB86CD821CE238D700EFDEAE /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BB86CD851CE238FF00EFDEAE /* Presenter */,
+				BB86CD861CE2390400EFDEAE /* View */,
+				BB86CD871CE2390B00EFDEAE /* Wireframe */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		BB86CD831CE238E300EFDEAE /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Module Interface";
+			sourceTree = "<group>";
+		};
+		BB86CD841CE238EC00EFDEAE /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BB86CD881CE2392000EFDEAE /* Interactor */,
+				BB86CD891CE2392F00EFDEAE /* Manager */,
+				BB86CD8A1CE2393500EFDEAE /* Entity */,
+			);
+			name = "Application Logic";
+			sourceTree = "<group>";
+		};
+		BB86CD851CE238FF00EFDEAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BB86CD861CE2390400EFDEAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BB86CD871CE2390B00EFDEAE /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		BB86CD881CE2392000EFDEAE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		BB86CD891CE2392F00EFDEAE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		BB86CD8A1CE2393500EFDEAE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		BBF44CC71CE063B9005B5CC5 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +266,7 @@
 		BBF44CF51CE07CF9005B5CC5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD811CE238C100EFDEAE /* Sharing */,
 				BBF44CF61CE07D0C005B5CC5 /* Gallery */,
 			);
 			name = Modules;
