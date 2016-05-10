@@ -10,4 +10,5 @@ import UIKit
 
 protocol GalleryModuleInterface {
     func updateGalleryView()
+    func shareGif(gif: Gif)
 }

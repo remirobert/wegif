@@ -19,6 +19,14 @@
 		BB86CD7C1CE22D2200EFDEAE /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD7A1CE22D2200EFDEAE /* GalleryCollectionViewCell.swift */; };
 		BB86CD7D1CE22D2200EFDEAE /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB86CD7B1CE22D2200EFDEAE /* GalleryCollectionViewCell.xib */; };
 		BB86CD801CE22DD400EFDEAE /* GalleryCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD7F1CE22DD400EFDEAE /* GalleryCellProtocol.swift */; };
+		BB86CD8C1CE2412200EFDEAE /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD8B1CE2412200EFDEAE /* ShareViewController.swift */; };
+		BB86CD8E1CE2413500EFDEAE /* ShareWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD8D1CE2413500EFDEAE /* ShareWireframe.swift */; };
+		BB86CD901CE2414100EFDEAE /* SharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD8F1CE2414100EFDEAE /* SharePresenter.swift */; };
+		BB86CD921CE2416200EFDEAE /* ShareModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD911CE2416200EFDEAE /* ShareModuleInterface.swift */; };
+		BB86CD941CE2417A00EFDEAE /* ShareInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD931CE2417A00EFDEAE /* ShareInteractor.swift */; };
+		BB86CD961CE2425000EFDEAE /* ShareInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD951CE2425000EFDEAE /* ShareInteractorInput.swift */; };
+		BB86CD981CE2425C00EFDEAE /* ShareInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD971CE2425C00EFDEAE /* ShareInteractorOutput.swift */; };
+		BB86CD9A1CE242F700EFDEAE /* ShareViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD991CE242F700EFDEAE /* ShareViewInterface.swift */; };
 		BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */; };
 		BBF44CD91CE063BA005B5CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CD71CE063BA005B5CC5 /* Main.storyboard */; };
 		BBF44CDB1CE063BA005B5CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CDA1CE063BA005B5CC5 /* Assets.xcassets */; };
@@ -58,6 +66,14 @@
 		BB86CD7A1CE22D2200EFDEAE /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB86CD7B1CE22D2200EFDEAE /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB86CD7F1CE22DD400EFDEAE /* GalleryCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCellProtocol.swift; sourceTree = "<group>"; };
+		BB86CD8B1CE2412200EFDEAE /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		BB86CD8D1CE2413500EFDEAE /* ShareWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareWireframe.swift; sourceTree = "<group>"; };
+		BB86CD8F1CE2414100EFDEAE /* SharePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePresenter.swift; sourceTree = "<group>"; };
+		BB86CD911CE2416200EFDEAE /* ShareModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModuleInterface.swift; sourceTree = "<group>"; };
+		BB86CD931CE2417A00EFDEAE /* ShareInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareInteractor.swift; sourceTree = "<group>"; };
+		BB86CD951CE2425000EFDEAE /* ShareInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareInteractorInput.swift; sourceTree = "<group>"; };
+		BB86CD971CE2425C00EFDEAE /* ShareInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareInteractorOutput.swift; sourceTree = "<group>"; };
+		BB86CD991CE242F700EFDEAE /* ShareViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewInterface.swift; sourceTree = "<group>"; };
 		BBF44CD01CE063BA005B5CC5 /* wegif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wegif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF44CD81CE063BA005B5CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +179,7 @@
 		BB86CD831CE238E300EFDEAE /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD911CE2416200EFDEAE /* ShareModuleInterface.swift */,
 			);
 			name = "Module Interface";
 			sourceTree = "<group>";
@@ -180,6 +197,7 @@
 		BB86CD851CE238FF00EFDEAE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD8F1CE2414100EFDEAE /* SharePresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -187,6 +205,8 @@
 		BB86CD861CE2390400EFDEAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD8B1CE2412200EFDEAE /* ShareViewController.swift */,
+				BB86CD991CE242F700EFDEAE /* ShareViewInterface.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 		BB86CD871CE2390B00EFDEAE /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD8D1CE2413500EFDEAE /* ShareWireframe.swift */,
 			);
 			name = Wireframe;
 			sourceTree = "<group>";
@@ -201,6 +222,9 @@
 		BB86CD881CE2392000EFDEAE /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD931CE2417A00EFDEAE /* ShareInteractor.swift */,
+				BB86CD951CE2425000EFDEAE /* ShareInteractorInput.swift */,
+				BB86CD971CE2425C00EFDEAE /* ShareInteractorOutput.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -537,7 +561,9 @@
 			files = (
 				BB23727E1CE1E8B300ED4065 /* GalleryService.swift in Sources */,
 				BB2372721CE1D86D00ED4065 /* GalleryDataManager.swift in Sources */,
+				BB86CD8C1CE2412200EFDEAE /* ShareViewController.swift in Sources */,
 				BB86CD801CE22DD400EFDEAE /* GalleryCellProtocol.swift in Sources */,
+				BB86CD8E1CE2413500EFDEAE /* ShareWireframe.swift in Sources */,
 				BBF44D011CE08027005B5CC5 /* GalleryViewController.swift in Sources */,
 				BBF44D031CE08350005B5CC5 /* GalleryPresenter.swift in Sources */,
 				BBF44CF41CE065C2005B5CC5 /* AppDependencies.swift in Sources */,
@@ -546,13 +572,19 @@
 				BB86CD7C1CE22D2200EFDEAE /* GalleryCollectionViewCell.swift in Sources */,
 				BB23727B1CE1DFD800ED4065 /* Network.swift in Sources */,
 				BB2372701CE1D34200ED4065 /* GalleryInteractorOutput.swift in Sources */,
+				BB86CD961CE2425000EFDEAE /* ShareInteractorInput.swift in Sources */,
+				BB86CD921CE2416200EFDEAE /* ShareModuleInterface.swift in Sources */,
 				BB2372791CE1DF5B00ED4065 /* GalleryManagerProtocol.swift in Sources */,
 				BBF44D101CE0F519005B5CC5 /* UIViewController+Extensions.swift in Sources */,
 				BBF44D091CE0842E005B5CC5 /* GalleryViewInterface.swift in Sources */,
+				BB86CD9A1CE242F700EFDEAE /* ShareViewInterface.swift in Sources */,
+				BB86CD901CE2414100EFDEAE /* SharePresenter.swift in Sources */,
+				BB86CD981CE2425C00EFDEAE /* ShareInteractorOutput.swift in Sources */,
 				BB23726E1CE1D33500ED4065 /* GalleryInteractorInput.swift in Sources */,
 				BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */,
 				BBF44D0B1CE084EF005B5CC5 /* GalleryModuleInterface.swift in Sources */,
 				BB2372771CE1DDB100ED4065 /* Gif.swift in Sources */,
+				BB86CD941CE2417A00EFDEAE /* ShareInteractor.swift in Sources */,
 				BBF44D071CE083E3005B5CC5 /* GalleryInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

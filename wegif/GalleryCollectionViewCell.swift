@@ -15,6 +15,8 @@ class GalleryCollectionViewCell: UICollectionViewCell, GalleryCellProtocol {
     @IBOutlet weak var imageView: FLAnimatedImageView!
     @IBOutlet weak var indicatorLoading: UIActivityIndicatorView!
     
+    var model: Gif?
+    
     static var identifier: String {
         get {
             return "GalleryCollectionViewCell"
@@ -30,12 +32,14 @@ class GalleryCollectionViewCell: UICollectionViewCell, GalleryCellProtocol {
     }
     
     override func prepareForReuse() {
+        self.model = nil
         self.imageView.animatedImage = nil
         self.imageView.alpha = 0
         self.indicatorLoading.startAnimating()
     }
     
     func configure(gif: Gif) {
+        self.model = gif
         self.imageView.animatedImage = nil
         guard let imageUrl = gif.previewUrl,
             url = NSURL(string: imageUrl) else {

@@ -12,6 +12,18 @@ class AppDependencies {
     
     private var window: UIWindow
     private let galleryWireframe = GalleryWireframe()
+    private let shareWireframe = ShareWireframe()
+    
+    private func initShareDependencies() {
+        let sharePresenter = SharePresenter()
+        let shareInteractor = ShareInteractor()
+        
+        sharePresenter.interactor = shareInteractor
+        sharePresenter.wireframe = self.shareWireframe
+        
+        shareInteractor.interactorOutput = sharePresenter
+        self.shareWireframe.sharePresenter = sharePresenter
+    }
     
     private func initGalleryDependencies() {
         let galleryPresenter = GalleryPresenter()
@@ -34,5 +46,8 @@ class AppDependencies {
     init(window: UIWindow) {
         self.window = window
         self.initGalleryDependencies()
+        self.initShareDependencies()
+        
+        self.galleryWireframe.shareWireframe = self.shareWireframe
     }
 }

@@ -34,7 +34,7 @@ class GalleryViewController: UIViewController, GalleryViewInterface {
                                         forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
         self.collectionViewLayout.minimumInteritemSpacing = 0
         self.collectionViewLayout.minimumLineSpacing = 0
-        
+        self.collectionView.delegate = self
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: #selector(GalleryViewController.refreshContentGallery), forControlEvents: .ValueChanged)
         self.collectionView.addSubview(self.refreshControl)
@@ -73,4 +73,9 @@ class GalleryViewController: UIViewController, GalleryViewInterface {
 
 extension GalleryViewController: UICollectionViewDelegate {
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? GalleryCellProtocol else { return }
+        guard let model = cell.model else { return }
+        self.eventHandler?.shareGif(model)
+    }
 }

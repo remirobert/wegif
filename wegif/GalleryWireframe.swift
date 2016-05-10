@@ -9,9 +9,14 @@
 import UIKit
 
 class GalleryWireframe {
-    
-    var galleryPresenter: GalleryPresenter?
+
     private var galleryViewController: GalleryViewController?
+    var shareWireframe: ShareWireframe?
+    var galleryPresenter: GalleryPresenter?
+    
+    func presentShareInterface(parentController: UIViewController) {
+        self.shareWireframe?.presentShareInterface(parentController)
+    }
     
     func presentGalleryInterface(window: UIWindow) {
         self.galleryViewController = GalleryViewController.instanceController(.Main) as? GalleryViewController

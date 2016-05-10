@@ -12,4 +12,5 @@ protocol GalleryCellProtocol {
     func configure(gif: Gif)
     static func initWithNib() -> UINib?
     static var identifier: String { get }
+    var model: Gif? { get }
 }
