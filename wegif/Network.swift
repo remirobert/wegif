@@ -36,20 +36,9 @@ extension NetworkRequest {
     func parameters() -> [String: AnyObject]? { return nil }
 }
 
-class Network {
+class Network<A> {
     
-    private class var sharedInstance: Network {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: Network? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = Network()
-        }
-        return Static.instance!
-    }
-    
-    private static func handleJSONResponse(request: Request,
+    private func handleJSONResponse(request: Request,
                                            blockSuccess: BlockSuccessCompletion,
                                            blockError: BlockErrorCompletion) {
         request.validate().responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
@@ -62,7 +51,7 @@ class Network {
         })
     }
     
-    static func send(request request: NetworkRequest,
+    func send(request request: NetworkRequest,
                              blockSuccess: BlockSuccessCompletion,
                              blockError: BlockErrorCompletion) {
         let method = request.method().alamofireMethod()
@@ -73,8 +62,8 @@ class Network {
         self.handleJSONResponse(request, blockSuccess: blockSuccess, blockError: blockError)
     }
     
-    static func send<A>(request request: NetworkRequest,
-                     parse: JSON -> A?,
+    func send(request request: NetworkRequest,
+                     parse: JSON? -> A?,
                      blockSuccess: A? -> (),
                      blockError: BlockErrorCompletion)  {
         self.send(request: request, blockSuccess: { (response: JSON?) in

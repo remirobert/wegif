@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias BlockCompletion = ([Gif]? -> ())
+typealias BlockCompletion = ((gifs: [Gif]?, error: NSError?) -> ())
 
 protocol GalleryManagerProtocol {
     func fetchTrendingGallery(completion: BlockCompletion)

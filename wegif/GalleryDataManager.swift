@@ -10,8 +10,16 @@ import UIKit
 import Alamofire
 
 class GalleryDataManager: GalleryManagerProtocol {
-
+    
+    private lazy var network: Network! = Network<[Gif]>()
+    
     func fetchTrendingGallery(completion: BlockCompletion) {
+        let request = GalleryService.Trending
         
+        self.network.send(request: request, parse: Gif.initGifs, blockSuccess: { gifs in
+            completion(gifs: gifs, error: nil)
+        }) { error in
+            completion(gifs: nil, error: error)
+        }
     }
 }
