@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             print("failed init api")
         }
-
         return true
     }
 }

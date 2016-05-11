@@ -39,12 +39,14 @@ extension ShareViewController: ShareViewInterface {
         guard let url = NSURL(string: url) else {
             return
         }
-        self.imageView.pin_updateWithProgress = true
-        self.imageView.pin_setImageFromURL(url) { (result: PINRemoteImageManagerResult) in
-            self.indicatorLoading.stopAnimating()
-            UIView.animateWithDuration(0.9, animations: {
-                self.imageView.alpha = 1
-            })
+        dispatch_async(dispatch_get_main_queue()) {
+            self.imageView.pin_updateWithProgress = true
+            self.imageView.pin_setImageFromURL(url) { (result: PINRemoteImageManagerResult) in
+                self.indicatorLoading.stopAnimating()
+                UIView.animateWithDuration(0.9, animations: {
+                    self.imageView.alpha = 1
+                })
+            }
         }
     }
 

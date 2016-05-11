@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController, GalleryViewInterface {
+class GalleryViewController: UIViewController {
 
     private var dataSource: GalleryViewDatasource?
     private var refreshControl: UIRefreshControl!
@@ -54,6 +54,9 @@ class GalleryViewController: UIViewController, GalleryViewInterface {
         self.eventHandler?.updateGalleryView()
         self.view = self.emptyView
     }
+}
+
+extension GalleryViewController: GalleryViewInterface {
     
     func showErrorMessage(error: String) {
         self.view = self.errorView

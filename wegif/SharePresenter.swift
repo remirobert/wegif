@@ -20,7 +20,7 @@ class SharePresenter: ShareModuleInterface, ShareInteractorOutput {
         self.wireframe.dismissShareInterface()
     }
     
-    func  startDisplay() {
+    func startDisplay() {
         guard let url = gif?.originalUrl else {
             return
         }

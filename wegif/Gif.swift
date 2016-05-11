@@ -18,11 +18,12 @@ class Gif {
         guard let json = json else { return nil }
         guard let images = json["images"] as? JSON,
             let downsized = images["fixed_width_small"] as? JSON,
+            let preview = images["fixed_height_small"] as? JSON,
             let original = images["original"] as? JSON else {
             return nil
         }
         self.videoUrl = original["mp4"] as? String
-        self.originalUrl = original["url"] as? String
+        self.originalUrl = preview["url"] as? String
         self.previewUrl = downsized["url"] as? String
     }
     
