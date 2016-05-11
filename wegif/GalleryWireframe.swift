@@ -14,8 +14,8 @@ class GalleryWireframe {
     var shareWireframe: ShareWireframe?
     var galleryPresenter: GalleryPresenter?
     
-    func presentShareInterface(parentController: UIViewController) {
-        self.shareWireframe?.presentShareInterface(parentController)
+    func presentShareInterface(parentController: UIViewController, gif: Gif) {
+        self.shareWireframe?.presentShareInterface(parentController, gif: gif)
     }
     
     func presentGalleryInterface(window: UIWindow) {

@@ -14,7 +14,16 @@ class SharePresenter: ShareModuleInterface, ShareInteractorOutput {
     var interactor: ShareInteractorInput?
     var userInterface: ShareViewInterface?
     
+    var gif: Gif?
+    
     func dismissController() {
         self.wireframe.dismissShareInterface()
+    }
+    
+    func  startDisplay() {
+        guard let url = gif?.originalUrl else {
+            return
+        }
+        self.userInterface?.displayPreviewGif(url)
     }
 }

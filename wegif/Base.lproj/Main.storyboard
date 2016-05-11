@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -166,10 +167,20 @@
                                                 <action selector="closeShareController:" destination="h81-X9-XG7" eventType="touchUpInside" id="3bd-PM-Set"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovq-GN-y2D" customClass="FLAnimatedImageView">
+                                            <rect key="frame" x="35" y="35" width="530" height="530"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ovq-GN-y2D" secondAttribute="height" multiplier="1:1" id="Cuh-HP-7hA"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QGq-MS-T08" firstAttribute="leading" secondItem="YLq-qi-TjG" secondAttribute="leading" constant="25" id="0PM-kz-wQ8"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ovq-GN-y2D" secondAttribute="trailing" constant="35" id="CI1-ta-oD0"/>
                                         <constraint firstItem="QGq-MS-T08" firstAttribute="top" secondItem="YLq-qi-TjG" secondAttribute="top" constant="25" id="REj-DY-1jQ"/>
+                                        <constraint firstItem="Ovq-GN-y2D" firstAttribute="centerX" secondItem="YLq-qi-TjG" secondAttribute="centerX" id="nXQ-wK-HPu"/>
+                                        <constraint firstItem="Ovq-GN-y2D" firstAttribute="leading" secondItem="YLq-qi-TjG" secondAttribute="leading" constant="35" id="qbc-Bm-Xlc"/>
+                                        <constraint firstItem="Ovq-GN-y2D" firstAttribute="centerY" secondItem="YLq-qi-TjG" secondAttribute="centerY" id="yEM-Wj-0Ke"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
@@ -183,6 +194,9 @@
                             <constraint firstItem="L9v-dL-fcB" firstAttribute="top" secondItem="Pto-K1-oCP" secondAttribute="bottom" id="Pcz-xC-lax"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ovq-GN-y2D" id="ibn-Pt-XSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvO-au-L7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

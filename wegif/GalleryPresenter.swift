@@ -32,6 +32,6 @@ class GalleryPresenter: GalleryModuleInterface, GalleryInteractorOutput {
     }
     
     func shareGif(gif: Gif) {
-        self.wireframe?.presentShareInterface(self.userInterface as! UIViewController)
+        self.wireframe?.presentShareInterface(self.userInterface as! UIViewController, gif: gif)
     }
 }

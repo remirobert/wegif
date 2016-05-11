@@ -12,15 +12,17 @@ class Gif {
 
     var videoUrl: String?
     var previewUrl: String?
+    var originalUrl: String?
     
     init?(json: JSON?) {
         guard let json = json else { return nil }
         guard let images = json["images"] as? JSON,
             downsized = images["fixed_width_small"] as? JSON,
-            let orignal = images["original"] as? JSON else {
+            let original = images["original"] as? JSON else {
             return nil
         }
-        self.videoUrl = orignal["mp4"] as? String
+        self.videoUrl = original["mp4"] as? String
+        self.originalUrl = original["url"] as? String
         self.previewUrl = downsized["url"] as? String
     }
     

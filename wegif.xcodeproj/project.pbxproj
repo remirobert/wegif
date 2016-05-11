@@ -243,6 +243,14 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		BB86CD9B1CE2B8BF00EFDEAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB2372761CE1DDB100ED4065 /* Gif.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BBF44CC71CE063B9005B5CC5 = {
 			isa = PBXGroup;
 			children = (
@@ -357,7 +365,6 @@
 		BBF44CFC1CE07F7F005B5CC5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				BB2372761CE1DDB100ED4065 /* Gif.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -392,6 +399,7 @@
 		BBF44D0E1CE0F4AD005B5CC5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB86CD9B1CE2B8BF00EFDEAE /* Model */,
 				BB23727C1CE1DFDB00ED4065 /* Network */,
 				BBF44D111CE0F51F005B5CC5 /* Extensions */,
 			);

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 class ShareViewController: UIViewController, ShareViewInterface {
 
     var eventHandler: ShareModuleInterface?
+    @IBOutlet weak var imageView: FLAnimatedImageView!
     
     @IBAction func closeShareController(sender: AnyObject) {
         self.eventHandler?.dismissController()
@@ -18,5 +20,12 @@ class ShareViewController: UIViewController, ShareViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func displayPreviewGif(url: String) {
+        guard let url = NSURL(string: url) else {
+            return
+        }
+        self.imageView.pin_setImageFromURL(url)
     }
 }
