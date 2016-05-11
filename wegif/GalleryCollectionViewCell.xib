@@ -13,17 +13,17 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j94-Su-yLh" customClass="FLAnimatedImageView">
-                        <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-fY-rtl">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-fY-rtl">
                         <rect key="frame" x="85" y="84" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="5af-4g-9gR"/>
                             <constraint firstAttribute="height" constant="20" id="9zR-WY-nu9"/>
                         </constraints>
                     </activityIndicatorView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j94-Su-yLh" customClass="FLAnimatedImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="188"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>

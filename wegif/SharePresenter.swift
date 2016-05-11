@@ -13,4 +13,8 @@ class SharePresenter: ShareModuleInterface, ShareInteractorOutput {
     var wireframe: ShareWireframe!
     var interactor: ShareInteractorInput?
     var userInterface: ShareViewInterface?
+    
+    func dismissController() {
+        self.wireframe.dismissShareInterface()
+    }
 }

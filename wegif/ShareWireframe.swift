@@ -23,4 +23,8 @@ class ShareWireframe {
         self.shareViewController!.modalPresentationStyle = .OverFullScreen
         parentController.presentViewController(self.shareViewController!, animated: true, completion: nil)
     }
+    
+    func dismissShareInterface() {
+        self.shareViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

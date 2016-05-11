@@ -45,15 +45,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="272" height="450"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-z1-IBI">
-                            <rect key="frame" x="-39" y="195" width="37" height="37"/>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-z1-IBI">
+                            <rect key="frame" x="117.5" y="206.5" width="37" height="37"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="37" id="MR3-7U-KOu"/>
                                 <constraint firstAttribute="width" constant="37" id="P8Y-o9-Slf"/>
                             </constraints>
                         </activityIndicatorView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp1-0f-COa">
-                            <rect key="frame" x="-133" y="240" width="225" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp1-0f-COa">
+                            <rect key="frame" x="23" y="251" width="225" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="225" id="ddl-EU-zUQ"/>
                                 <constraint firstAttribute="height" constant="21" id="qay-Dg-OF9"/>
@@ -152,6 +152,25 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YLq-qi-TjG">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGq-MS-T08">
+                                            <rect key="frame" x="25" y="25" width="39" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="39" id="J5e-UO-MZs"/>
+                                                <constraint firstAttribute="height" constant="30" id="U8k-de-rg2"/>
+                                            </constraints>
+                                            <state key="normal" title="Close">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeShareController:" destination="h81-X9-XG7" eventType="touchUpInside" id="3bd-PM-Set"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QGq-MS-T08" firstAttribute="leading" secondItem="YLq-qi-TjG" secondAttribute="leading" constant="25" id="0PM-kz-wQ8"/>
+                                        <constraint firstItem="QGq-MS-T08" firstAttribute="top" secondItem="YLq-qi-TjG" secondAttribute="top" constant="25" id="REj-DY-1jQ"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>

@@ -12,6 +12,10 @@ class ShareViewController: UIViewController, ShareViewInterface {
 
     var eventHandler: ShareModuleInterface?
     
+    @IBAction func closeShareController(sender: AnyObject) {
+        self.eventHandler?.dismissController()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
