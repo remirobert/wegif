@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ShareProtocol {
-    func shareVideoUrl(url: String)
+protocol ShareDataManagerProtocol {
+    func shareVideoUrl(url: String) -> Bool
 }

@@ -33,4 +33,10 @@ class SharePresenter: ShareModuleInterface, ShareInteractorOutput {
         }
         self.interactor?.shareMediaWechat(gif)
     }
+    
+    func shareGifSuccess() {
+    }
+    
+    func shareGifFailed() {
+    }
 }

@@ -29,7 +29,7 @@
 		BB86CD9A1CE242F700EFDEAE /* ShareViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CD991CE242F700EFDEAE /* ShareViewInterface.swift */; };
 		BB86CD9F1CE2C1D500EFDEAE /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB86CD9C1CE2C1D500EFDEAE /* libWeChatSDK.a */; };
 		BB86CDA31CE2C5B700EFDEAE /* ShareDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CDA21CE2C5B700EFDEAE /* ShareDataManager.swift */; };
-		BB86CDA51CE2C5BE00EFDEAE /* ShareProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CDA41CE2C5BE00EFDEAE /* ShareProtocol.swift */; };
+		BB86CDA51CE2C5BE00EFDEAE /* ShareDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86CDA41CE2C5BE00EFDEAE /* ShareDataManagerProtocol.swift */; };
 		BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */; };
 		BBF44CD91CE063BA005B5CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CD71CE063BA005B5CC5 /* Main.storyboard */; };
 		BBF44CDB1CE063BA005B5CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF44CDA1CE063BA005B5CC5 /* Assets.xcassets */; };
@@ -82,7 +82,7 @@
 		BB86CD9E1CE2C1D500EFDEAE /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		BB86CDA11CE2C1F700EFDEAE /* wegif-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wegif-Bridging-Header.h"; sourceTree = "<group>"; };
 		BB86CDA21CE2C5B700EFDEAE /* ShareDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDataManager.swift; sourceTree = "<group>"; };
-		BB86CDA41CE2C5BE00EFDEAE /* ShareProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareProtocol.swift; sourceTree = "<group>"; };
+		BB86CDA41CE2C5BE00EFDEAE /* ShareDataManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDataManagerProtocol.swift; sourceTree = "<group>"; };
 		BBF44CD01CE063BA005B5CC5 /* wegif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wegif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF44CD31CE063BA005B5CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF44CD81CE063BA005B5CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				BB86CDA21CE2C5B700EFDEAE /* ShareDataManager.swift */,
-				BB86CDA41CE2C5BE00EFDEAE /* ShareProtocol.swift */,
+				BB86CDA41CE2C5BE00EFDEAE /* ShareDataManagerProtocol.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -601,7 +601,7 @@
 				BBF44CD41CE063BA005B5CC5 /* AppDelegate.swift in Sources */,
 				BBF44D0B1CE084EF005B5CC5 /* GalleryModuleInterface.swift in Sources */,
 				BB2372771CE1DDB100ED4065 /* Gif.swift in Sources */,
-				BB86CDA51CE2C5BE00EFDEAE /* ShareProtocol.swift in Sources */,
+				BB86CDA51CE2C5BE00EFDEAE /* ShareDataManagerProtocol.swift in Sources */,
 				BB86CD941CE2417A00EFDEAE /* ShareInteractor.swift in Sources */,
 				BBF44D071CE083E3005B5CC5 /* GalleryInteractor.swift in Sources */,
 			);

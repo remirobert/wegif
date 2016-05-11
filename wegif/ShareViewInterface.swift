@@ -10,4 +10,6 @@ import UIKit
 
 protocol ShareViewInterface {
     func displayPreviewGif(url: String)
+    func displaySuccessShare()
+    func displayFailedShare()
 }

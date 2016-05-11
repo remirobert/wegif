@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ShareDataManager: ShareProtocol {
+class ShareDataManager: ShareDataManagerProtocol {
 
-    override func shareVideoUrl(url: String) {
+    func shareVideoUrl(url: String) -> Bool {
         let req = SendMessageToWXReq()
         req.bText = false
         req.scene = WXSceneTimeline.rawValue
@@ -25,6 +25,6 @@ class ShareDataManager: ShareProtocol {
         
         req.message = message
         
-        WXApi.sendReq(req)
+        return WXApi.sendReq(req)
     }
 }

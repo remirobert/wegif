@@ -9,5 +9,6 @@
 import UIKit
 
 protocol ShareInteractorOutput {
-
+    func shareGifSuccess()
+    func shareGifFailed()
 }

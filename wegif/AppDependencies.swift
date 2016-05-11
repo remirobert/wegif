@@ -17,11 +17,13 @@ class AppDependencies {
     private func initShareDependencies() {
         let sharePresenter = SharePresenter()
         let shareInteractor = ShareInteractor()
+        let dataManager = ShareDataManager()
         
         sharePresenter.interactor = shareInteractor
         sharePresenter.wireframe = self.shareWireframe
         
         shareInteractor.interactorOutput = sharePresenter
+        shareInteractor.dataManager = dataManager
         self.shareWireframe.sharePresenter = sharePresenter
     }
     
