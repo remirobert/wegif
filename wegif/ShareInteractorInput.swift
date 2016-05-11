@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ShareInteractorInput {
-
+    func shareMediaWechat(gif: Gif)
 }

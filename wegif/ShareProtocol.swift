@@ -1,5 +1,5 @@
 //
-//  ShareModuleInterface.swift
+//  ShareProtocol.swift
 //  wegif
 //
 //  Created by Remi Robert on 11/05/16.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-protocol ShareModuleInterface {
-    func dismissController()
-    func shareMedia()
+class ShareProtocol {
+    func shareVideoUrl(url: String)
 }

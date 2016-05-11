@@ -26,4 +26,11 @@ class SharePresenter: ShareModuleInterface, ShareInteractorOutput {
         }
         self.userInterface?.displayPreviewGif(url)
     }
+    
+    func shareMedia() {
+        guard let gif = self.gif else {
+            return
+        }
+        self.interactor?.shareMediaWechat(gif)
+    }
 }

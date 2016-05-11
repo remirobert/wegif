@@ -11,4 +11,8 @@ import UIKit
 class ShareInteractor: ShareInteractorInput {
 
     var interactorOutput: ShareInteractorOutput?
+    
+    func shareMediaWechat(gif: Gif) {
+        
+    }
 }
