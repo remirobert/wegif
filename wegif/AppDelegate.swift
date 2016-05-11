@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.appDepencies.presentRootController()
         self.setupApperence()
+        
+        if WXApi.registerApp("wxd930ea5d5a258f4f", withDescription: "test app") {
+            print("api init okay")
+        }
+        else {
+            print("failed init api")
+        }
+
         return true
     }
 }

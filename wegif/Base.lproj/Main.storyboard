@@ -154,6 +154,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-Sb-S0C">
+                                            <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="17f-Bb-SlY"/>
+                                                <constraint firstAttribute="width" constant="20" id="Px3-Dr-fex"/>
+                                            </constraints>
+                                        </activityIndicatorView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGq-MS-T08">
                                             <rect key="frame" x="25" y="25" width="39" height="30"/>
                                             <constraints>
@@ -167,19 +174,38 @@
                                                 <action selector="closeShareController:" destination="h81-X9-XG7" eventType="touchUpInside" id="3bd-PM-Set"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovq-GN-y2D" customClass="FLAnimatedImageView">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovq-GN-y2D" customClass="FLAnimatedImageView">
                                             <rect key="frame" x="35" y="35" width="530" height="530"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Ovq-GN-y2D" secondAttribute="height" multiplier="1:1" id="Cuh-HP-7hA"/>
                                             </constraints>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GS-Il-qFW">
+                                            <rect key="frame" x="281" y="562" width="38" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7l1-rC-ejk"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="Ohu-2D-uEL"/>
+                                                <constraint firstAttribute="width" constant="38" id="Q9B-Pc-vTO"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="iW3-JR-mrD"/>
+                                            </constraints>
+                                            <state key="normal" title="share">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="share:" destination="h81-X9-XG7" eventType="touchUpInside" id="okd-6x-o1a"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QGq-MS-T08" firstAttribute="leading" secondItem="YLq-qi-TjG" secondAttribute="leading" constant="25" id="0PM-kz-wQ8"/>
+                                        <constraint firstItem="1GS-Il-qFW" firstAttribute="centerX" secondItem="YLq-qi-TjG" secondAttribute="centerX" id="6gL-sQ-kNK"/>
                                         <constraint firstAttribute="trailing" secondItem="Ovq-GN-y2D" secondAttribute="trailing" constant="35" id="CI1-ta-oD0"/>
+                                        <constraint firstItem="bKJ-Sb-S0C" firstAttribute="centerX" secondItem="YLq-qi-TjG" secondAttribute="centerX" id="LcH-RL-E4K"/>
                                         <constraint firstItem="QGq-MS-T08" firstAttribute="top" secondItem="YLq-qi-TjG" secondAttribute="top" constant="25" id="REj-DY-1jQ"/>
+                                        <constraint firstItem="bKJ-Sb-S0C" firstAttribute="centerY" secondItem="YLq-qi-TjG" secondAttribute="centerY" id="RYK-li-mA1"/>
                                         <constraint firstItem="Ovq-GN-y2D" firstAttribute="centerX" secondItem="YLq-qi-TjG" secondAttribute="centerX" id="nXQ-wK-HPu"/>
                                         <constraint firstItem="Ovq-GN-y2D" firstAttribute="leading" secondItem="YLq-qi-TjG" secondAttribute="leading" constant="35" id="qbc-Bm-Xlc"/>
+                                        <constraint firstAttribute="bottom" secondItem="1GS-Il-qFW" secondAttribute="bottom" constant="8" id="qfa-ee-zWt"/>
                                         <constraint firstItem="Ovq-GN-y2D" firstAttribute="centerY" secondItem="YLq-qi-TjG" secondAttribute="centerY" id="yEM-Wj-0Ke"/>
                                     </constraints>
                                 </view>
@@ -196,6 +222,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Ovq-GN-y2D" id="ibn-Pt-XSH"/>
+                        <outlet property="indicatorLoading" destination="bKJ-Sb-S0C" id="IKS-Tn-WqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvO-au-L7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
